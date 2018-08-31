@@ -187,7 +187,7 @@ class List {
             }
         };
 
-        void print_reverse() //Completado
+        void print_reverse() //Completado // Funciona pero podría implementarse de una manera más eficiente con recursión
         {
             if(!head) //Si la lista esta vacia
                 throw "Lista Vacía"; //Se da una excepcion
@@ -205,18 +205,18 @@ class List {
         void clear() //Completado
         {
             if(!head) //Si la lista ya esta vacia
-                throw "La lista ya esta limpia";  //Se da la excepcion
+                throw "La lista ya esta limpia";  //Se da la excepcion 
             else
                 {
                     head -> killSelf(); //La cabeza realiza la limpieza en cadena.
                 }
-
+                // Te faltó igualar la cabeza a nullptr
                 nodes = 0; //Se reinicia el numero de nodos tambien.
         };
 
         /*Iterator<T> begin();
         Iterator<T> end();*/
 
-        /*~List();*/
+        /*~List();*/ // No se implementó el destructor, esto es importante ya que nos permite liberar memoria
 };
 #endif
